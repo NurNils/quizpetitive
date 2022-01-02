@@ -1,0 +1,23 @@
+{
+  "name": "quizpetitive-socket",
+  "version": "1.0.0",
+  "description": "Socket for the Game Quizpetitive",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "format": "prettier --write \"./{src,e2e}/**/*.{js,json,ts,html,scss}\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "http": "0.0.1-security",
+    "mongoose": "5.9.14",
+    "nodemon": "2.0.4",
+    "prettier": "2.0.5",
+    "request": "2.88.2",
+    "socket.io": "2.3.0"
+  }
+}

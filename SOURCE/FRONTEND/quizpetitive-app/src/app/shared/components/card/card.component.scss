@@ -1,0 +1,188 @@
+.points {
+    float: left;
+}
+.stars {
+    float: right;
+    .material-icons{
+        color: #d8d8d8;
+        &.active{
+            color: #F2A81E !important;
+        }
+    }
+}
+.header {
+    margin-bottom: 30px;
+    font-size: 1.4em;
+    border-bottom: 1px solid white;
+
+}
+.category {
+    border-top: 1px solid gray;
+} 
+.cat {
+    margin: 10px 80px;
+    background-color: #04B2D9;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    h1 {
+        font-size: 1.8em;
+        font-family: "Luckiest Guy", cursive;
+    }
+}
+
+.blinkSelected {
+    animation: blink-animation1 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation1 1s steps(5, start) infinite;
+    border: #003455 4px solid;
+}
+@keyframes blink-animation1 {
+    to {
+        border-color: #005E7D;
+    }
+}
+@-webkit-keyframes blink-animation1 {
+    to {
+        border-color: #005E7D;
+    }
+}
+
+.blinkRight {
+    animation: blink-animation2 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation2 1s steps(5, start) infinite;
+    border: #94DD81 4px solid;
+}
+@keyframes blink-animation2 {
+    to {
+        border-color: #C5EC77;
+    }
+}
+@-webkit-keyframes blink-animation2 {
+    to {
+        border-color: #C5EC77;
+    }
+}
+
+.blinkWrong {
+    animation: blink-animation3 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation3 1s steps(5, start) infinite;
+    border: #FF6047 4px solid;
+}
+@keyframes blink-animation3 {
+    to {
+        border-color: #D73C2A;
+    }
+}
+@-webkit-keyframes blink-animation3 {
+    to {
+        border-color: #D73C2A;
+    }
+}
+
+.button:disabled{
+    background-color: #04B2D9;
+    color: white;
+}
+
+.button {
+    width: 100%;
+    height: auto;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 1%;
+    .questionWrapper{
+        white-space: normal !important;
+        position: relative;
+        display: block;
+        line-height: 25px;
+    }
+  }
+.button:hover {
+    background-color: rgba(24, 175, 209, 0.788);
+}
+.mat-button, .mat-raised-button{
+    background-color: #04B2D9;
+} 
+
+.question {
+    text-align: center;
+    .ask {
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #04B2D9;
+        border-radius: 10px;
+        color: white;
+        font-size: 1.1em;
+    }
+    .askright {
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #04B2D9;
+        border-radius: 10px;
+        color: white;
+        font-size: 1.1em;
+        border: 2.5px solid #F2A81E;
+    }
+    #questionTxt{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .question {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .header {
+        margin-left: 20px;
+        margin-right: 20px; 
+        padding-bottom: 5px;
+        color: white;
+        border: none;
+    }
+    .category {
+        border-top: 1px solid white;
+        .cat {
+            background-color: white;
+        }
+    }
+    .question {
+        h1 {
+            color: white;
+        }
+        .ask {
+            color: #04B2D9;
+            background-color: white;
+            font-weight: bold;
+        }
+        .askright {
+            color: #04B2D9;
+            background-color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .cat h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .cat h1 {
+        font-size: 1.3em;
+    }
+}
+@media only screen and (max-height: 750px) {
+    .cat{
+      margin: 10px 80px;
+      padding-top: 10px;
+      padding-bottom: 1px;
+    }
+    .header{
+        margin-bottom: 30px;
+    }
+
+  }

@@ -1,0 +1,294 @@
+﻿{
+    "questions": [
+        {
+            "category": "Konzeption",
+            "question": "Wie weit muss die Verständlichkeit des Konzepts reichen?",
+            "answers": ["Projektteam",
+            "Osterrieder",
+            "Außenstehende",
+            "Sponsoren"],
+            "difficulty": "1",
+            "rightIndex": "3"
+        },
+        {
+            "category": "Konzeption",
+            "question": "Wie beginnt man ein Konzept?",
+            "answers": ["Erfolgskontrolle",
+            "Abstract",
+            "Bewertung",
+            "Zielsetzung"],
+            "difficulty": "1",
+            "rightIndex": "2"
+        },
+        {
+            "category": "Konzeption",
+            "question": "Was ist bei der Konzeption zu beachten?",
+            "answers": ["keine absurden Ideen berücksichtigen",
+            "wenig bis gar nicht kommunizieren",
+            "viel Freiraum und neue Ideen zulassen",
+            "strikt nach der Grundidee vorgehen"],
+            "difficulty": "1",
+            "rightIndex": "3"
+        },
+        {
+            "category": "Konzeption",
+            "question": "Wie formuliert man die Zielsetzung im Konzept?",
+            "answers": ["BMW",
+            "AUDI",
+            "MINI",
+            "SMART"],
+            "difficulty": "1",
+            "rightIndex": "4"
+        },
+        {
+            "category": "Konzeption",
+            "question": "Welche Definition beschreibt den \"Auslöser für Aktivitäten\"?",
+            "answers": ["klare Struktur und Handlungsbeschreibungen",
+            "Grund für die Durchführung vom Projekt",
+            "klare Strategien und Handlungsempfehlungen",
+            "klare Definition der Grundidee"],
+            "difficulty": "2",
+            "rightIndex": "1"
+        },
+        {
+            "category": "Konzeption",
+            "question": "Welche der Aussagen entspricht nicht der Wahrheit?",
+            "answers": ["Projektmanager hat die Verantwortung über das Projekt",
+            "Auftraggeber vertritt die Projektinteressen nach außen",
+            "Auftraggeber entscheidet über das Finanzielle",
+            "Projektmanager hat die Macht über das Projekt"],
+            "difficulty": "3",
+            "rightIndex": "4"
+        },
+        {
+            "category": "Konzeption",
+            "question": "Welche Aussage entspricht der Einleitung des Konzepts?",
+            "answers": ["Abstract ≙ Zusammenfassung, um Interesse zu wecken",
+            "Prolog ≙ Auflistung der Ziele",
+            "Prolog ≙ Ausführliche Einleitung in das Konzept",
+            "Abstract ≙ Ausführliche Einleitung in das Konzept"],
+            "difficulty": "3",
+            "rightIndex": "1"
+        },
+        {
+            "category": "Konzeption",
+            "question": "Welche Aufgaben wurden falsch zugeteilt?",
+            "answers": ["Auftraggeber liegt Ziele und Prioritäten mit PM fest",
+            "Auftraggeber ist nicht im Steuerungsgremium",
+            "Steuerungsgremium trifft bereichübergreifend Entscheidungen",
+            "PM koordiniert Kommunikation zwischen Teams"],
+            "difficulty": "3",
+            "rightIndex": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was ist ein Stakeholder",
+            "answers": ["Jemand der ein Steak hält",
+            "Personen die die Zielrichtung beeinflussen",
+            "Ein BBQ Profi",
+            "Personen die sich um Finanzen bei Projekten kümmern"],
+            "difficulty": "1",
+            "Antwort": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Welcher Bereich gehört nicht zur Finanzplanung",
+            "answers": ["Eträge des Projkets",
+            "Planen der Zahlungstermine",
+            "Beschaffung der Finanziellen Mittel",
+            "Liquiditätsüberwachung"],
+            "difficulty": "1",
+            "Antwort": "3"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was ist keine Art von Finanzierung",
+            "answers": ["Eigenfinanzierung ",
+            "Umschichtungsfinanzierung ",
+            "Fremdfinanzierung ",
+            "Schitungsfinanzierung"],
+            "difficulty": "1",
+            "Antwort": "4"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was sind keine zu analysiernde Risiken der Projektfinanzierung",
+            "answers": ["Sicherheit des Kapitals",
+            "Ausfall der Kapitalgeber",
+            "Währungskursrisiken",
+            "Ausfall von Projektträgern"],
+            "difficulty": "1",
+            "Antwort": "1"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was muss bei der Terminplanung nicht berücksichtigt werden",
+            "answers": ["Urlaubstage",
+            "Feiertage",
+            "Krankheitsbedingte Fehlzeiten",
+            "Kündigungen"],
+            "difficulty": "1",
+            "Antwort": "4"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was gehört nicht zu den Smarten Zielkriterien",
+            "answers": ["Spezifisch",
+            "Attraktiv",
+            "Messbar",
+            "Terminierung"],
+            "difficulty": "1",
+            "Antwort": "4"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was sind keine Finanzmittel",
+            "answers": ["Kredite",
+            "Kapital der Projektträger",
+            "Fördermittel des öff. Sektors",
+            "Honorarzahlungen"],
+            "difficulty": "1",
+            "Antwort": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was ist ein Erfolgsfaktor für Stakejoldermanagement",
+            "answers": ["Kontrolle",
+            "Konsultation",
+            "Konditionierung ",
+            "Finanzen"],
+            "difficulty": "2",
+            "Antwort": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Beim Stakeholdermanagement gehören Wettbewerber zu welchem Umfeld",
+            "answers": ["Primär",
+            "Sekundär",
+            "Beiden",
+            "Keinen"],
+            "difficulty": "2",
+            "Antwort": "3"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Wer kann Projekte Finanzieren",
+            "answers": ["Shareholder",
+            "Auftraggeber ",
+            "Shareholder oder Auftraggeber",
+            "Shareholder & Auftraggeber"],
+            "difficulty": "2",
+            "Antwort": "4"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Wie sollte man Zeitpuffer einsetzen",
+            "answers": ["Großzügig",
+            "Am Ende einer Kette",
+            "Zwischendurch immer wieder",
+            "Antwort 2 & 3"],
+            "difficulty": "2",
+            "Antwort": "4"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Wer ist Verantwortlich für die Ziele",
+            "answers": ["Auftraggeber",
+            "Projektleitung ",
+            "Projektleitung & Management",
+            "Management"],
+            "difficulty": "2",
+            "Antwort": "3"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Konsultation bedeutet",
+            "answers": ["Stakeholder informieren",
+            "Stakeholder involvieren",
+            "Stakeholder nicht informieren",
+            "Stakeholder nicht involvieren"],
+            "difficulty": "2",
+            "Antwort": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Beim Stakeholdermanagement gehören Berater zu welchem Umfeld",
+            "answers": ["Primär",
+            "Sekundär",
+            "Beiden",
+            "Keinen"],
+            "difficulty": "2",
+            "Antwort": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Während des Projekts werden Erträge erziehlt, diese gehören zur",
+            "answers": ["Eigenfinanzierung ",
+            "Schitungsfinanzierung",
+            "Umschichtungsfinanzierung ",
+            "Fremdfinanzierung "],
+            "difficulty": "3",
+            "Antwort": "1"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Wer ist für die Zahlungsfähigkeit des Projekts verantwortlich",
+            "answers": ["Die Shareholder",
+            "Immer der Projektmanager",
+            "Der Auftraggeber",
+            "Meistens der Projektmanger"],
+            "difficulty": "3",
+            "Antwort": "4"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Eine kleine Verzögerung auf dem kritischen Pfad geschieht. Was bedeutet das für das Projekt",
+            "answers": ["Da Puffer das ist passiert nichts",
+            "Das Projekt verzögert sich",
+            "Ein anderer Pfad verzögert sich",
+            "Alle Pfade verögern sich"],
+            "difficulty": "3",
+            "Antwort": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Beim Dreieck des PM (Time,Cost,Quality) sind welche die Wichtigsten",
+            "answers": ["Time & Cost",
+            "Keine der anderen",
+            "Quality & Cost",
+            "Cost & Quality"],
+            "difficulty": "3",
+            "Antwort": "2"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Sollte man Qualifizierten Mitarbeitern einfache Aufgaben geben damit diese schneller erledigt sind?",
+            "answers": ["Ja, wegen des Flow Effects",
+            "Nein, wegen der Ressourcen",
+            "Nein, wegen des Flow Effects",
+            "Ja, wegen der Ressourcen"],
+            "difficulty": "3",
+            "Antwort": "3"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Mit welchem Begriff verbindet man Durchbruchsziele",
+            "answers": ["Attraktiv",
+            "Terminiert",
+            "Spezifisch",
+            "Realistisch"],
+            "difficulty": "3",
+            "Antwort": "4"
+        },
+        {
+            "category": "Initialisierung",
+            "question": "Was zeichnet einen guten Projektmanger aus beim Stakeholdermanagement",
+            "answers": ["Geht Stakeholdern(SH) aus dem weg ",
+            "Geht auf die Emotionen der SH ein",
+            "Versteht die SH -Empathie",
+            "Die Position der SH verstehen"],
+            "difficulty": "3",
+            "Antwort": "3"
+        }
+    ]
+}

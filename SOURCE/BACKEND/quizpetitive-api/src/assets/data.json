@@ -1,0 +1,9 @@
+[
+    {
+        "category": "Kategorie",
+        "question": "Frage?",
+        "answers": ["richtig", "falsch1", "falsch2", "falsch3"],
+        "rightIndex": 0,
+        "difficulty": 1
+    }
+]

@@ -1,0 +1,82 @@
+<app-ads></app-ads>
+<ng-container *ngIf="name && !dataService.gameNotFound">
+  <app-player class="desktop"></app-player>
+
+  <app-box>
+    <div class="content">
+      <p>Einstellungen</p>
+      <hr>
+      <br>
+      <div class="settings">
+        <!-- Mat-Select -->
+        <label>Runden</label><br>
+        <button mat-icon-button [matMenuTriggerFor]="menu" [disabled]="!isHost">
+          <span id="playerTxt">{{ dataService.rounds }}</span>
+        </button>
+        <mat-menu #menu="matMenu" class="dropbox">
+          <div>
+            <span mat-menu-item value="1" (click)="dataRoundsChange(1)">1</span>
+            <span mat-menu-item value="3" (click)="dataRoundsChange(3)">3</span>
+            <span mat-menu-item value="5" (click)="dataRoundsChange(5)">5</span>
+            <span mat-menu-item value="10" (click)="dataRoundsChange(10)">10</span>
+          </div>
+        </mat-menu><br><br>
+        <!-- Mat-Select-->
+        <label>Zeit</label><br>
+        <div class="timeBox2">
+          <mat-form-field class="timeBox">
+            <input matNativeControl id="timeInput" value="15" min="15" max="60" type="number" [(ngModel)]="dataService.maxTime"
+              class="timeBox" [disabled]="!isHost" (ngModelChange)="dataChange()" (keyup.enter)="startGame()">
+          </mat-form-field>
+        </div>
+        <br><br>
+        <!-- Slider -->
+        <label>Spieleranzahl</label><br>
+        {{ dataService.maxPlayers }}
+        <mat-slider min="{{dataService.playerData.length}}" [(ngModel)]="dataService.maxPlayers" max="8" step="1"
+          id="playerSlider" [disabled]="!isHost" (ngModelChange)="dataChange()"></mat-slider>
+        <br><br><br>
+        <button mat-raised-button color="primary" (click)="startGame()" [disabled]="!isHost" class="Startbtn">Starte
+          Spiel</button>
+      </div>
+    </div>
+
+    <div class="inviteLinkBox">
+      <label id="inviteText">Lade andere Spieler ein!</label>
+      <input class="inviteLinkText" id="inviteLink" (click)="copyText()" type="text" readonly value="{{ getInviteLink() }}">
+      <p id="copied">Link kopiert!</p>
+    </div>
+    <app-player class="mobile"></app-player>
+  </app-box>
+</ng-container>
+<ng-container *ngIf="!name && !dataService.gameNotFound">
+  <app-box>
+
+    <div class="content">
+      <p *ngIf="isHost">Raum erstellen</p>
+      <p *ngIf="!isHost">Raum betreten</p>
+      <hr>
+      <p  style="font-size: 22px;">Wer bist du?</p>
+      <br><br>
+    </div>
+    <br><br><br><br>
+    <div style="text-align: center">
+      <!-- Name Eingabe -->
+      <mat-form-field appearance="fill">
+        <mat-label>Dein krasser Name</mat-label>
+        <input matInput type="text" maxlength="10" [(ngModel)]="dataService.ownPlayerName" (keyup.enter)="setName()"/>
+        <mat-hint align="end">{{ dataService.ownPlayerName ? dataService.ownPlayerName.length : 0 }} / 10</mat-hint>
+      </mat-form-field>
+    </div>
+    <br><br>
+    <!-- Bestaetigung? -->
+    <div>
+      <button mat-raised-button color="primary" (click)="setName()" [disabled]="!dataService.ownPlayerName" class="Startbtn">Und Looooos</button>
+    </div>
+  </app-box>
+</ng-container>
+<ng-container *ngIf="dataService.gameNotFound">
+  <app-box>
+  <span>Spiel mit der ID: <i>{{this.dataService.roomId}}</i> wurde nicht gefunden!</span>
+  </app-box>
+</ng-container>

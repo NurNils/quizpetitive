@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="desktopPlayers">
+        <h1 id="title">Mitspieler ({{dataService.playerData.length}}/{{dataService.maxPlayers}}):</h1>
+        <div class="card" *ngFor="let player of dataService.playerData">
+            <div class="playerCard">
+                <h1 class="playerText" [class.active]="player.index == dataService.ownPlayerIndex">{{ player.name }} 
+                    <span [class.activeTxt]="player.index == dataService.ownPlayerIndex" style="display: none;"> (du)</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="footer">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <span id="playerTxt">Mitspieler ({{dataService.playerData.length}}/{{dataService.maxPlayers}})</span>
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <div *ngFor="let player of dataService.playerData">
+                    <span mat-menu-item>
+                        <p class="playerText" *ngIf="player.index != dataService.ownPlayerIndex">{{ player.name }}</p>
+                        <p class="playerText" *ngIf="player.index == dataService.ownPlayerIndex" style="color: #0576C4">{{ player.name }} (du)</p>
+                    </span>
+                </div>
+            </mat-menu>
+        </div>
+    </div>
+</div>

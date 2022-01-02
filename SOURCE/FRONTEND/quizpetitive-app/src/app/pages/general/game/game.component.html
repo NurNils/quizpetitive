@@ -1,0 +1,126 @@
+<ng-container *ngIf="dataService.roomId">
+    <app-ads></app-ads>
+    <ng-container *ngIf="!dataService.ended">
+        <app-header class="desktop"></app-header>
+        <app-box [showLogo]="false">
+            <app-header class="mobile"></app-header>
+            <ng-container *ngIf="!dataService.playing">
+                <ng-container *ngIf="!dataService.isChoosing">
+                    <div class="waiting">
+                        <h1>Warte kurz</h1>
+                        <hr>
+                        <p style="font-size: 1.5em;">Ein anderer Spieler wählt gerade aus</p>
+                        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                        <div style="font-size: 15em;; margin-top: 0.7em;">😔</div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="dataService.isChoosing">
+                    <div class="category">
+                        <div>
+                            <h1>Kategorie</h1>
+                            <hr>
+                        </div><br>
+                        <!-- Categories -->
+                        <button *ngFor="let category of dataService.categories" mat-raised-button color="primary"
+                            (click)="categoryClicked(category.name)"
+                            [class.active]="dataService.choosenCategory.name == category.name" id="{{category.name}}"
+                            class="button">
+                            <img class="img" style="height: 90px" src="assets/images/{{category.name}}.svg">
+                            <br>
+                            <span>{{ category.name }}</span>
+                        </button>
+                        <!-- Stars -->
+                        <div class="stars">
+                            <span class="star rating" (click)="starClicked('1')"
+                                [class.gray]="dataService.choosenDifficulty < 1"
+                                [class.deactivated]="!dataService.choosenDifficulty || dataService.choosenCategory.easy < 1">
+                                <span class="material-icons">star</span>
+                            </span>
+                            <span class="star rating" (click)="starClicked('2')"
+                                [class.gray]="dataService.choosenDifficulty < 2"
+                                [class.deactivated]="!dataService.choosenDifficulty || dataService.choosenCategory.medium < 1">
+                                <span class="material-icons">star</span>
+                            </span>
+                            <span class="star rating" (click)="starClicked('3')"
+                                [class.gray]="dataService.choosenDifficulty < 3"
+                                [class.deactivated]="!dataService.choosenDifficulty || dataService.choosenCategory.hard < 1">
+                                <span class="material-icons">star</span>
+                            </span>
+                        </div>
+                        <button mat-raised-button (click)="chooseQuestion()"
+                            [class.active]="dataService.choosenCategory && dataService.choosenDifficulty"
+                            color="primary" class="question-button button"
+                            [disabled]="!dataService.choosenCategory || !dataService.choosenDifficulty">Lets
+                            GOOOOO</button>
+                    </div>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="dataService.playing">
+                <app-card></app-card>
+            </ng-container>
+        </app-box>
+    </ng-container>
+
+    <ng-container *ngIf="dataService.ended">
+        <div class="desktop players">
+            <h1 id="title">Mitspieler:</h1>
+            <div class="card" *ngFor="let player of dataService.winners; let i = index">
+                <div class="playerCard">
+                    <h1 class="playerText" [class.active]="player.index == dataService.ownPlayerIndex">{{ player.name }}
+                        <span [class.activeTxt]="player.index == dataService.ownPlayerIndex" style="display: none;">
+                            (du)</span>
+                    </h1>
+                    <p>{{ player.points }} Punkte</p>
+                    <p class="place">{{ i+1 }}</p>
+                    <mat-icon *ngIf="dataService.guessedPlayers.includes(player.index)" class="doneIcon">done</mat-icon>
+                </div>
+            </div>
+        </div>
+        <app-box [showLogo]="true">
+            <div class="mobile mobilePlayers">
+                <div class="footer">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <span id="playerTxt">Mitspieler </span>
+                        <mat-icon>account_circle</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <div *ngFor="let player of dataService.winners; let i = index">
+                            <span mat-menu-item>
+                                <!-- TODO add place automatically -->
+                                <p *ngIf="player.index != dataService.ownPlayerIndex">
+                                    <b>{{ i+1 }}. </b>
+                                    {{ player.name }} 
+                                    <i>{{ player.points }} Pkt.</i>
+                                    <mat-icon *ngIf="dataService.guessedPlayers.includes(player.index)" class="doneIconMobile">done</mat-icon>
+                                </p>
+                                <p *ngIf="player.index == dataService.ownPlayerIndex" style="color: #0576C4">
+                                    <b>{{ i+1 }}. </b>
+                                    {{ player.name }} (du) 
+                                    <i>{{ player.points }} Pkt.</i>
+                                    <mat-icon *ngIf="dataService.guessedPlayers.includes(player.index)" class="doneIconMobile">done</mat-icon>
+                                </p>
+                            </span>
+                        </div>
+                    </mat-menu>
+                </div>
+            </div>
+            <div id="content">
+                <h3 class="header">Siegerehrung</h3>
+                <div id="behold">
+                    <div *ngIf="dataService.winners[1]" id="middle" class="border"><b>2.Platz:</b><br />
+                        {{ dataService.winners[1].name }}</div>
+                    <div id="main" class="border"><b>1.Platz:</b><br /> {{ dataService.winners[0].name }}</div>
+                    <div *ngIf="dataService.winners[2]" id="side" class="border"><b>3.Platz:</b><br />
+                        {{ dataService.winners[2].name }}</div>
+                </div>
+                <br>
+                <br>
+                <!-- Durch den Button, wird ein neues Spiel mit den selben Settings erstellt -->
+                <div style="text-align: center;"><button mat-raised-button [routerLink]="['/']" class="button">Zurück
+                        zur Startseite</button>
+                </div>
+                <br>
+            </div>
+        </app-box>
+    </ng-container>
+</ng-container>

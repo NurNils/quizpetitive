@@ -1,0 +1,113 @@
+p{
+  font-family: "Luckiest Guy" , cursive;
+  font-size: 40px;
+  color: #F2A81E;
+}
+#copied{
+  color: rgb(177, 177, 177);
+  font-size: 15px;
+  font-family: "Calibri" , cursive;
+  display: none;
+}
+.settings{
+  font-size: 20px;
+}
+#inviteText{
+  position: relative;
+  bottom: 10px;
+}
+#playerTxt{
+  font-size: 25px;
+  font-family: 'Luckiest Guy';
+  font-weight: bold;
+}
+.button{
+  width: 300px;
+  height: 40px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 30px;
+}
+.Startbtn {
+  border-radius: 20px;
+  padding: 1%;
+  width: 50%;
+  font-family: 'Anton', sans-serif; 
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: -20px;
+  background-color: #04B2D9;
+}
+hr{
+  background-color: #F2A81E;
+  color: #F2A81E;
+  height:3px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.dropbox{
+  font-family: "Luckiest Guy";
+  font-size: 25px;
+  width: 50px;
+  height: 25px;
+  align-items: center;
+  margin-top: 15px;
+}
+.timeBox{
+  width: 50px;
+  font-size: 25px;
+  height: 25px;
+  position: relative;
+  font-weight: bold;
+  font-family: 'Luckiest Guy';
+}
+
+.timeBox2{
+  position: relative;
+  top: -15px;
+}
+.content{
+  padding-top: 20px  !important;
+}
+@media only screen and (max-width: 1000px) {
+  .mobile{
+    display: inline;
+  }
+  .desktop{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: inline;
+  }
+}
+.inviteLinkBox{
+  margin-top: 10%;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Luckiest Guy";
+}
+.inviteLinkText{
+  width: 90%;
+  height: 25px;
+  text-align: center;
+  font-size: 18px;
+}
+input{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+#copied{
+  font-family: "Luckiest Guy";
+}
+.mat-slider-thumb{
+  background-color: #F2A81E !important;
+}
+.mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label{
+  background-color: #F2A81E !important;
+}

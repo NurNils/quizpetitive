@@ -1,0 +1,48 @@
+<!-- 
+    <p>{{ card.question }}</p>
+    <p>{{ card.difficulty }}</p> 
+-->
+<ng-container *ngIf="dataService.currentQuestion">
+
+    <div class="header">
+        <b>
+            <p><span class="points">{{dataService.currentQuestion.difficulty}}00 Punkte</span>
+                <span class="stars">
+                    <span class="material-icons"
+                        [class.active]="dataService.currentQuestion.difficulty >= 1">star</span>
+                    <span class="material-icons"
+                        [class.active]="dataService.currentQuestion.difficulty >= 2">star</span>
+                    <span class="material-icons"
+                        [class.active]="dataService.currentQuestion.difficulty == 3">star</span>
+                </span></p>
+        </b>
+    </div>
+
+    <div class="category">
+        <div class="cat">
+            <h1 style="color: #F2A81E;">{{dataService.currentQuestion.category}}</h1>
+        </div>
+    </div>
+
+
+    <div class="question">
+        <h1 id="questionTxt"><b>{{dataService.currentQuestion.question}}</b></h1>
+            <button mat-raised-button color="primary" (click)="click(0)" [class.blinkRight]="dataService.currentAnswer != -1 && dataService.currentAnswer == 0" [class.blinkWrong]="dataService.currentAnswer != dataService.currentGuess && dataService.currentAnswer != -1 && dataService.currentGuess == 0" [class.blinkSelected]="dataService.currentGuess == 0 && dataService.currentAnswer == -1" [disabled]="dataService.hasAnswered || dataService.currentAnswer != -1" class="button">
+                <span class="questionWrapper">
+                    A) {{dataService.currentQuestion.answers[0]}}
+                </span></button>
+            <button mat-raised-button color="primary" (click)="click(1)" [class.blinkRight]="dataService.currentAnswer != -1 && dataService.currentAnswer == 1"  [class.blinkWrong]="dataService.currentAnswer != dataService.currentGuess && dataService.currentAnswer != -1 && dataService.currentGuess == 1" [class.blinkSelected]="dataService.currentGuess == 1 && dataService.currentAnswer == -1" [disabled]="dataService.hasAnswered || dataService.currentAnswer != -1" class="button">
+                <span class="questionWrapper">
+                    B) {{dataService.currentQuestion.answers[1]}}
+                </span></button>
+            <button mat-raised-button color="primary" (click)="click(2)" [class.blinkRight]="dataService.currentAnswer != -1 && dataService.currentAnswer == 2"  [class.blinkWrong]="dataService.currentAnswer != dataService.currentGuess && dataService.currentAnswer != -1 && dataService.currentGuess == 2" [class.blinkSelected]="dataService.currentGuess == 2 && dataService.currentAnswer == -1" [disabled]="dataService.hasAnswered || dataService.currentAnswer != -1" class="button">
+                <span class="questionWrapper">
+                    C) {{dataService.currentQuestion.answers[2]}}
+                </span></button>
+            <button mat-raised-button color="primary" (click)="click(3)" [class.blinkRight]="dataService.currentAnswer != -1 && dataService.currentAnswer == 3"  [class.blinkWrong]="dataService.currentAnswer != dataService.currentGuess && dataService.currentAnswer != -1 && dataService.currentGuess == 3" [class.blinkSelected]="dataService.currentGuess == 3 && dataService.currentAnswer == -1" [disabled]="dataService.hasAnswered || dataService.currentAnswer != -1" class="button">
+                <span class="questionWrapper">
+                    D) {{dataService.currentQuestion.answers[3]}}
+                </span>
+            </button>
+    </div>
+</ng-container>

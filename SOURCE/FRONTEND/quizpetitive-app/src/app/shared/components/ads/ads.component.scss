@@ -1,0 +1,11 @@
+.ads{
+  position: fixed;
+  left: calc(50% + 550px);
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 350px;
+  border-color: black;
+  height: 632px;
+  padding: 0px;
+}

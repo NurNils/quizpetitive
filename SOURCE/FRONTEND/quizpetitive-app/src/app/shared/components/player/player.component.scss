@@ -1,0 +1,87 @@
+.desktopPlayers{
+    background-color: none;
+    width: 20%;
+    text-align: center;
+    padding: 0.5%;
+    position: absolute;
+    height: auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 20%;
+    top: 50%;
+    .playerCard{
+        h1{
+            span{
+                &.activeTxt{
+                    display: inline-block !important;
+                }
+            }
+            &.active{
+                color: #0576C4;
+            }
+        }
+        border: 3px #67CC8B solid;
+        border-radius: 5px;
+        margin: 10px 0;
+        background-color: #67CC8B;
+        height: auto;
+    }
+    #title{
+        font-weight: bold;
+        font-size: 28px;
+    }
+    h1{
+        margin-top: 5px;
+        padding: 0px 25px;
+        margin-bottom: 5px;
+    }
+    .place{
+        float: left;
+        position: relative;
+        font-family: 'Luckiest Guy';
+        top: -1.7em;
+        left: 0.2em;
+        font-size: 30px;
+        color: #F2A81E;
+        text-shadow: black 2px 1px;
+    }
+}
+.playerText{
+    font-weight: bold;
+}
+.mobile{
+    color: white;
+    font-size: 24px!important;
+    height: 0px;
+    button{
+        text-align: center;
+        width: auto !important;
+        font-size: 26px!important;
+        font-weight: normal;
+        text-align: center;
+    }
+    h1{
+        margin: 10px;
+    }
+    .footer{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .mobile{ display: none; }       
+} 
+@media only screen and (max-width: 1000px) {
+    .desktopPlayers { display: none; }
+    .desktopInformation { display: none; }
+} 
+@media only screen and (max-width: 1250px) {
+    .desktopPlayers{
+        left: 15%;
+    }
+} 
+#title, #playerTxt{
+   font-family: 'Luckiest Guy'; 
+}
+.playerText{
+    font-size: 22px !important;
+}

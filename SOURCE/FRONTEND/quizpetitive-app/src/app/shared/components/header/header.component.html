@@ -1,0 +1,57 @@
+<div class="header">
+    <div class="desktopPlayers">
+        <h1 id="title">Mitspieler:</h1>
+        <div class="card" *ngFor="let player of dataService.playerData; let i = index">
+            <div class="playerCard">
+                <h1 class="playerText" [class.active]="player.index == dataService.ownPlayerIndex">{{ player.name }} 
+                    <span [class.activeTxt]="player.index == dataService.ownPlayerIndex" style="display: none;"> (du)</span>
+                </h1>
+                <p>{{ player.points }} Punkte</p>
+                <p class="place">{{ i+1 }}</p>
+                <mat-icon *ngIf="dataService.guessedPlayers.includes(player.index)" class="doneIcon">done</mat-icon>
+                <mat-icon *ngIf="dataService.currentChooser == player.index && !dataService.playing" class="doneIcon">...</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="desktopInformation" *ngIf="!dataService.ended">
+        <h1 id="round" [class.active]="!dataService.playing">Runde {{dataService.currentRound}} von {{dataService.rounds}}</h1><br>
+        <h1 id="time" *ngIf="dataService.playing && !dataService.waiting">{{ getTime() }}</h1>
+        <h1 id="time" *ngIf="dataService.waiting">Warte kurz...</h1>
+    </div>
+
+    <div class="mobile">
+        <h1 id="place" *ngIf="!dataService.ended">{{ getOwnPlace() }}. Platz</h1>
+        <h1 id="points" *ngIf="!dataService.ended">{{ getOwnPoints() }} Punkte</h1><br><br>
+        <h1 id="time" *ngIf="dataService.playing && !dataService.waiting">{{ getTime() }}</h1>
+        <h1 id="time" *ngIf="dataService.waiting" style="font-size: 18px">Warte kurz...</h1>
+        <br><br>
+        <div class="footer">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <span id="playerTxt">Mitspieler </span>
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <div *ngFor="let player of dataService.playerData; let i = index">
+                    <span mat-menu-item>
+                        <!-- TODO add place automatically -->
+                        <p *ngIf="player.index != dataService.ownPlayerIndex">
+                            <b>{{ i+1 }}. </b>
+                            {{ player.name }} 
+                            <i>{{ player.points }} Pkt.</i>
+                            <mat-icon *ngIf="dataService.guessedPlayers.includes(player.index)" class="doneIconMobile">done</mat-icon>
+                            <mat-icon *ngIf="dataService.currentChooser == player.index && !dataService.playing" class="doneIconMobile">...</mat-icon>
+                        </p>
+                        <p *ngIf="player.index == dataService.ownPlayerIndex" style="color: #0576C4">
+                            <b>{{ i+1 }}. </b>
+                            {{ player.name }} (du) 
+                            <i>{{ player.points }} Pkt.</i>
+                            <mat-icon *ngIf="dataService.guessedPlayers.includes(player.index)" class="doneIconMobile">done</mat-icon>
+                            <mat-icon *ngIf="dataService.currentChooser == player.index && !dataService.playing" class="doneIconMobile">...</mat-icon>
+                        </p>
+                    </span>
+                </div>
+            </mat-menu>
+            <h1 id="round" *ngIf="!dataService.ended">Runde {{dataService.currentRound}} von {{dataService.rounds}}</h1>
+        </div>
+    </div>
+</div>

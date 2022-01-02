@@ -1,0 +1,129 @@
+mat-expansion-panel {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; 
+  border-radius: 20px;
+  background-color: #03A696;
+  margin-bottom: 6%;
+  margin-top: 1%;
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+.about{
+  background-color: #F2A81E;
+  mat-panel-title{
+    color: #5c5c5c;
+  }
+  p{
+    color: #5c5c5c;
+  }
+}
+
+mat-panel-title {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+#wrapper {
+    width: 30%;
+    text-align: center;
+    padding: 0.5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border: 1px #ededed solid;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.button {
+  width: 80%;
+  font-family: 'Anton', sans-serif; 
+  border-radius: 20px;
+  padding: 1%;
+}
+
+.mat-button, .mat-raised-button{
+  background-color: #04B2D9;
+} 
+
+.img {
+    width: 50%;
+    margin-top: 6%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: "Luckiest Guy", cursive;
+    padding: 0;
+    color: white;
+    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
+      0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
+      0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+      -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+    span {
+      transform: scale(0.9);
+      display: inline-block;
+    }
+    span:first-child {
+      animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+        alternate;
+    }
+    span:last-child {
+      animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+        infinite alternate;
+    }
+  }
+  
+  @keyframes bop {
+    0% {
+      transform: scale(0.9);
+    }
+    50%,
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bopB {
+    0% {
+      transform: scale(0.9);
+    }
+    80%,
+    100% {
+      transform: scale(1) rotateZ(-3deg);
+    }
+  }
+
+.wrapper {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  mat-expansion-panel {
+    background-color: white;
+    color: #5c5c5c;
+  }
+  .about{
+    background-color: white;
+    mat-panel-title {
+      color: black;
+    }
+  }
+  mat-panel-title {
+    color: black;
+  }
+}
